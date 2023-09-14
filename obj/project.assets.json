@@ -11117,11 +11117,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Phase4\\Day5\\Assessment4\\Assessment4\\Assessment4.csproj",
+      "projectUniqueName": "D:\\Phase4\\Day5\\Ass4\\Assessment4\\Assessment4.csproj",
       "projectName": "Assessment4",
-      "projectPath": "D:\\Phase4\\Day5\\Assessment4\\Assessment4\\Assessment4.csproj",
+      "projectPath": "D:\\Phase4\\Day5\\Ass4\\Assessment4\\Assessment4.csproj",
       "packagesPath": "C:\\Users\\KALPANA\\.nuget\\packages\\",
-      "outputPath": "D:\\Phase4\\Day5\\Assessment4\\Assessment4\\obj\\",
+      "outputPath": "D:\\Phase4\\Day5\\Ass4\\Assessment4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KALPANA\\AppData\\Roaming\\NuGet\\NuGet.Config",
