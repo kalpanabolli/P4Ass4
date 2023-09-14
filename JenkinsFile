@@ -32,7 +32,7 @@ pipeline {
             emailext (
                 subject: "Pipeline Failed",
                 body: "There was an error in the Jenkins pipeline. Please investigate.",
-                to: "kalpanabolli2@gmail.com"
+                to: "vasanth2219e@gmail.com"
             )
         }
     }
