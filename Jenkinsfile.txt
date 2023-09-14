@@ -1,0 +1,47 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your source code from your repository (e.g., Git)
+                checkout scm
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // Build your ASP.NET Core Web API project
+                script {
+                    def dotnetCmd = bat(script: 'dotnet --version', returnStatus: true)
+                    if (dotnetCmd == 0) {
+                        bat(script: 'dotnet build YourApiProjectName.sln')
+                    } else {
+                        error "Dotnet Core is not installed or not in PATH."
+                    }
+                }
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                // Run tests if needed
+            }
+        }
+        
+        stage('Publish') {
+            steps {
+                // Publish the ASP.NET Core application
+                script {
+                    bat(script: 'dotnet publish YourApiProjectName.sln -c Release -o publish_output')
+                }
+            }
+        }
+    }
+    
+    post {
+        success {
+            archiveArtifacts artifacts: 'publish_output/**/*', allowEmptyArchive: true
+        }
+    }
+}
